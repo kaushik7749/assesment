@@ -1,6 +1,6 @@
 const salesData = require('./sales_data');
 
-class IceCreamSalesAnalyzer {
+class IceCreamSales {
     constructor() {
         this.salesRecords = [];
     }
@@ -249,12 +249,11 @@ class IceCreamSalesAnalyzer {
     }
 }
 
-// Main execution function
 function main() {
     try {
         console.log('Loading sales data...');
         
-        const analyzer = new IceCreamSalesAnalyzer();
+        const analyzer = new IceCreamSales();
         analyzer.parseCSVData(salesData);
         
         console.log(`Successfully loaded ${analyzer.salesRecords.length} sales records`);
@@ -266,6 +265,4 @@ function main() {
         console.error('Stack trace:', error.stack);
     }
 }
-
-// Run the program
 main();
